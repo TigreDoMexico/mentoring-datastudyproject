@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BaseDeDados.Actions;
+using BaseDeDados.UI;
 
 namespace BaseDeDados
 {
@@ -6,7 +7,10 @@ namespace BaseDeDados
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var mainOperation = new UserAction();
+
+            MainInterface.MostrarApresentacao();
+            mainOperation.Begin();
         }
     }
 }
