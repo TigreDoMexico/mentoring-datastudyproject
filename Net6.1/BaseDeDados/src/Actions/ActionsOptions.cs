@@ -1,13 +1,13 @@
-namespace BaseDeDados.Operation.Options;
+namespace BaseDeDados.Actions.Options;
 
-public enum MainMenuOperation {
+public enum MainMenuAction {
     Finalizar = 0,
     Usuario = 1,
     Operacao = 2,
     Acesso = 3
 }
 
-public enum UserOperation {
+public enum UserDataAction {
     Voltar = 0,
     Adicionar = 1,
     Remover = 2,
@@ -15,14 +15,14 @@ public enum UserOperation {
     Pesquisar = 4
 }
 
-public enum OperacaoOperation {
+public enum OperacaoAction {
     Voltar = 0,
     Adicionar = 1,
     Desfazer = 2,
     RealizarTodas = 3
 }
 
-public enum AcessoOperation {
+public enum AcessoAction {
     Voltar = 0,
     Adicionar = 1,
     LiberarPrimeiro = 2,

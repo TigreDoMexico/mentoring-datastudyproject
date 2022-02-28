@@ -1,7 +1,7 @@
 ﻿using BaseDeDados.UI;
-using BaseDeDados.Operation;
+using BaseDeDados.Actions;
 
-var mainOperation = new Operation();
+var mainOperation = new UserAction();
 
 MainInterface.MostrarApresentacao();
 mainOperation.Begin();

@@ -1,9 +1,9 @@
+namespace BaseDeDados.Actions;
+
 using BaseDeDados.UI;
-using BaseDeDados.Operation.Options;
+using BaseDeDados.Actions.Options;
 
-namespace BaseDeDados.Operation;
-
-public class Operation
+public class UserAction
 {
     public void Begin()
     {
@@ -14,16 +14,16 @@ public class Operation
             GetTextoEscrito(out opcao);
 
             switch(opcao) {
-                case (int) MainMenuOperation.Usuario:
+                case (int) MainMenuAction.Usuario:
                     BeginUsuario();
                     break;
-                case (int) MainMenuOperation.Operacao:
+                case (int) MainMenuAction.Operacao:
                     BeginOperacao();
                     break;
-                case (int) MainMenuOperation.Acesso:
+                case (int) MainMenuAction.Acesso:
                     BeginAcesso();
                     break;
-                case (int) MainMenuOperation.Finalizar:
+                case (int) MainMenuAction.Finalizar:
                     Console.WriteLine("Obrigado por usar nosso sistema! Volte sempre");
                     programExecuting = false;
                     break;
@@ -43,19 +43,19 @@ public class Operation
             GetTextoEscrito(out opcao);
 
             switch(opcao) {
-                case (int) UserOperation.Adicionar:
+                case (int) UserDataAction.Adicionar:
                     Console.WriteLine("");
                     break;
-                case (int) UserOperation.Remover:
+                case (int) UserDataAction.Remover:
                     Console.WriteLine("A Opção OPERACAO");
                     break;
-                case (int) UserOperation.Alterar:
+                case (int) UserDataAction.Alterar:
                     Console.WriteLine("A Opção ACESSO");
                     break;
-                case (int) UserOperation.Pesquisar:
+                case (int) UserDataAction.Pesquisar:
                     Console.WriteLine("A Opção ACESSO");
                     break;
-                case (int) UserOperation.Voltar:
+                case (int) UserDataAction.Voltar:
                     menuUsuarioExecuting = false;
                     break;
                 default:
@@ -74,16 +74,16 @@ public class Operation
             GetTextoEscrito(out opcao);
 
             switch(opcao) {
-                case (int) OperacaoOperation.Adicionar:
+                case (int) OperacaoAction.Adicionar:
                     Console.WriteLine("A Opção USUÁRIO");
                     break;
-                case (int) OperacaoOperation.Desfazer:
+                case (int) OperacaoAction.Desfazer:
                     Console.WriteLine("A Opção OPERACAO");
                     break;
-                case (int) OperacaoOperation.RealizarTodas:
+                case (int) OperacaoAction.RealizarTodas:
                     Console.WriteLine("A Opção ACESSO");
                     break;
-                case (int) OperacaoOperation.Voltar:
+                case (int) OperacaoAction.Voltar:
                     menuOperacoesExecuting = false;
                     break;
                 default:
@@ -102,19 +102,19 @@ public class Operation
             GetTextoEscrito(out opcao);
 
             switch(opcao) {
-                case (int) AcessoOperation.Adicionar:
+                case (int) AcessoAction.Adicionar:
                     Console.WriteLine("A Opção USUÁRIO");
                     break;
-                case (int) AcessoOperation.LiberarPrimeiro:
+                case (int) AcessoAction.LiberarPrimeiro:
                     Console.WriteLine("A Opção OPERACAO");
                     break;
-                case (int) AcessoOperation.RemoverPrimeiro:
+                case (int) AcessoAction.RemoverPrimeiro:
                     Console.WriteLine("A Opção ACESSO");
                     break;
-                case (int) AcessoOperation.LiberarTodos:
+                case (int) AcessoAction.LiberarTodos:
                     Console.WriteLine("A Opção ACESSO");
                     break;
-                case (int) AcessoOperation.Voltar:
+                case (int) AcessoAction.Voltar:
                     menuAcessoExecuting = false;
                     break;
                 default:
