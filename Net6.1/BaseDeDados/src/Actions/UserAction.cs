@@ -2,9 +2,16 @@ namespace BaseDeDados.Actions;
 
 using BaseDeDados.UI;
 using BaseDeDados.Actions.Options;
+using BaseDeDados.Usuario;
+using BaseDeDados.Acesso;
+using BaseDeDados.Operacao;
 
 public class UserAction
 {
+    private readonly UsuarioManager _usuarioManager = new UsuarioManager();
+    private readonly OperacaoManager _operacaoManager = new OperacaoManager();
+    private readonly AcessoManager _acessoManager = new AcessoManager();
+
     public void Begin()
     {
         int opcao;
@@ -44,16 +51,19 @@ public class UserAction
 
             switch(opcao) {
                 case (int) UserDataAction.Adicionar:
-                    Console.WriteLine("");
+                    _usuarioManager.AdicionarUsuarioNaBase();
                     break;
                 case (int) UserDataAction.Remover:
-                    Console.WriteLine("A Opção OPERACAO");
+                    _usuarioManager.RemoverUsuarioDaBase();
                     break;
                 case (int) UserDataAction.Alterar:
-                    Console.WriteLine("A Opção ACESSO");
+                    _usuarioManager.AlterarUsuarioNaBase();
                     break;
                 case (int) UserDataAction.Pesquisar:
-                    Console.WriteLine("A Opção ACESSO");
+                    _usuarioManager.PesquisarUsuarioNaBase();
+                    break;
+                case (int) UserDataAction.ListarTodos:
+                    _usuarioManager.ListarTodosOsUsuariosDaBase();
                     break;
                 case (int) UserDataAction.Voltar:
                     menuUsuarioExecuting = false;
@@ -75,13 +85,13 @@ public class UserAction
 
             switch(opcao) {
                 case (int) OperacaoAction.Adicionar:
-                    Console.WriteLine("A Opção USUÁRIO");
+                    _operacaoManager.AdicionarNovaOperacao();
                     break;
                 case (int) OperacaoAction.Desfazer:
-                    Console.WriteLine("A Opção OPERACAO");
+                    _operacaoManager.DesfazerUltimaOperacao();
                     break;
                 case (int) OperacaoAction.RealizarTodas:
-                    Console.WriteLine("A Opção ACESSO");
+                    _operacaoManager.RealizarTodasAsOperacaos();
                     break;
                 case (int) OperacaoAction.Voltar:
                     menuOperacoesExecuting = false;
@@ -103,16 +113,16 @@ public class UserAction
 
             switch(opcao) {
                 case (int) AcessoAction.Adicionar:
-                    Console.WriteLine("A Opção USUÁRIO");
+                    _acessoManager.AdicionarAcessoParaUsuario();
                     break;
                 case (int) AcessoAction.LiberarPrimeiro:
-                    Console.WriteLine("A Opção OPERACAO");
+                    _acessoManager.LiberarPrimeiroAcessoDaFila();
                     break;
                 case (int) AcessoAction.RemoverPrimeiro:
-                    Console.WriteLine("A Opção ACESSO");
+                    _acessoManager.RemoverPrimeiroAcessoDaFila();
                     break;
                 case (int) AcessoAction.LiberarTodos:
-                    Console.WriteLine("A Opção ACESSO");
+                    _acessoManager.LiberarTodosOsAcessosDaFila();
                     break;
                 case (int) AcessoAction.Voltar:
                     menuAcessoExecuting = false;

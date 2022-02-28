@@ -12,7 +12,8 @@ public enum UserDataAction {
     Adicionar = 1,
     Remover = 2,
     Alterar = 3,
-    Pesquisar = 4
+    Pesquisar = 4,
+    ListarTodos = 5
 }
 
 public enum OperacaoAction {
