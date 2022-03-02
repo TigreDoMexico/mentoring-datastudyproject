@@ -8,9 +8,9 @@ O projeto foi montado em duas versões do .NET, o DotNet Core 2.1 e o .NET 6.
 <br />
 O motivo para isso é que a versão do C# no .NET 6 teve algumas alterações estruturais. Para que os estudantes da linguagem possam entender as duas versões e se adaptar a elas, foi montado esses dois cenários
 <br />
-[Versão DotNet Core 2.1](NetCore2.1/BaseDeDados/README.md)
+[Versão DotNet Core 2.1](NetCore2.1/BaseDeDados)
 <br />
-[Versão .NET 6](Net6.1/BaseDeDados/README.md)
+[Versão .NET 6](Net6.1/BaseDeDados)
 
 <br />
 <pre>Código criado por David Tigre Moraes</pre>
