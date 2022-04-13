@@ -16,7 +16,7 @@ namespace BaseDeDados.UserData
             
             listaUsuarios.Add(user);
 
-            Console.WriteLine("Usuario adicionado com sucesso");
+            Console.WriteLine("Usuario adicionado com sucesso!");
             Console.WriteLine("Tamanho da lista: " + listaUsuarios.Count);
             Console.ReadLine();
         }
