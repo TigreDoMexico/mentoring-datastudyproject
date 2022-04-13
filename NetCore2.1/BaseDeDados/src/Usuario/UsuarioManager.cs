@@ -1,12 +1,23 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace BaseDeDados.UserData
 {
     public class UsuarioManager
-    {
+    {   
+        //Propriedades
+        List<Usuario> listaUsuarios = new List<Usuario>();
+
+        // Metodo
         public void AdicionarUsuarioNaBase()
         {
-            Console.WriteLine("Método Não Implementado (AINDA)");
+            var user = new Usuario();
+            user.Nome = Console.ReadLine();
+            
+            listaUsuarios.Add(user);
+
+            Console.WriteLine("Usuario adicionado com sucesso");
+            Console.WriteLine("Tamanho da lista: " + listaUsuarios.Count);
             Console.ReadLine();
         }
 

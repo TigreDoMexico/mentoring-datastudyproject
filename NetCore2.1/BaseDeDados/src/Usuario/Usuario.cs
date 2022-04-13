@@ -1,7 +1,8 @@
 ﻿using System;
 
 namespace BaseDeDados.UserData
-{
+{   
+
     public class Usuario
     {
         public int RA { get; set; }
